@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matricular Estudiante en Cursos</title>
+    <link rel="stylesheet" th:href="@{/css/matricula.css}">
+</head>
+
+<body>
+    <div th:class="container">
+        <h2>Matricular Estudiante en Cursos</h2>
+
+        <form th:action="@{/estudiante/guardarMatricula}" method="post">
+            <input type="hidden" name="estudianteId" th:value="${estudianteId}" />
+
+            <label for="cursoIds">Seleccione los cursos:</label>
+            <select multiple="multiple" name="cursoIds">
+                <option th:each="curso : ${cursos}" th:value="${curso.id}" th:text="${curso.nombre}"></option>
+            </select>
+
+            <br />
+
+            <input type="submit" value="Matricular" />
+        </form>
+    </div>
+
+</body>
+
+</html>

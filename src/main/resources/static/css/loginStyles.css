@@ -1,0 +1,34 @@
+.container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 80%; 
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+
+.titulo-form{
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+
+.form-group > div > input{
+  width: 60%;
+  margin: auto;
+}
+
+.btn-custom {
+  width: auto; 
+  padding: 10px 20px; 
+  font-size: 18px; 
+  background-color: #ffcf00;
+  color: #242424;
+}
+
+.btn-custom:hover {
+  border: #ffcf00 solid 1px;
+  background-color: #ffcf00;
+  color: whitesmoke;
+}

@@ -1,0 +1,95 @@
+body,
+h1,
+h2,
+h3,
+p,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    max-width: 600px;
+    height: 90%;
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+label {
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(255, 165, 0, 0.5);
+}
+
+
+button {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #30d238;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, color 0.2s;
+    width: 50%;
+    margin: 13px auto;
+}
+
+button:hover {
+    transform: scale(1.03);
+    color: #ffd900;
+    ;
+
+}
+
+#encabezado {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        width: 80%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

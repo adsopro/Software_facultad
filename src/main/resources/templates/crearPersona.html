@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Persona</title>
+    <link rel="stylesheet" th:href="@{/css/crear.css}">
+</head>
+
+<body>
+    <div th:class="container">
+        <h2 id="encabezado">Crear Persona</h2>
+        <form th:action="@{/persona/guardarPersona}" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido"><br>
+
+            <label for="numero_identificacion">Documento de Identidad:</label>
+            <input type="text" id="numero_identificacion" name="numero_identificacion"><br>
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil">
+                <option th:each="estado : ${estadoCivilValues}" th:value="${estado}" th:text="${estado.estado}">
+                </option>
+            </select><br>
+
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+
+</html>

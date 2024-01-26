@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/inicioAdmin.css}">
+    <title>Inicio admin</title>
+</head>
+
+<body>
+    <div th:class="container">
+        <h2 id="titulo">Menú</h2>
+        <div th:class="lista">
+            <a th:href="@{/persona/crearPersona}">1.Crear persona</a>
+            <a th:href="@{/estudiante/crearEstudiante}">2.Crear estudiante</a>
+            <a th:href="@{/empleado/crearEmpleado}">3.Crear empleado</a>
+            <a th:href="@{/persona/personas}">4.Listar personas</a>
+            <a id="elemento5" th:href="@{/estudiante/estudiantes}">5.Listar estudiantes</a>
+            <a th:href="@{/empleado/empleados}">6.Listar empleados</a>
+        </div>
+        <div th:class="texto">
+            <p>Nota: En las opciones agregadas del menú se pueden crear, modificar y eliminar personas, estudiantes o
+                empleados
+                además de matricular estudiantes en cursos de la facultad. La mayoría de opciones están disponibles en
+                el apartado
+                "listar".
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

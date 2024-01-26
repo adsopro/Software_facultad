@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" th:href="@{/css/tablas.css}">
+</head>
+
+<body>
+    <div th:class="container">
+        <h2>Lista de Empleados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Número de identificación</th>
+                    <th>Despacho</th>
+                    <th>Año de incorporación</th>
+                    <th>Acciones</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="empleado : ${empleados}">
+                    <td th:text="${empleado.id}"></td>
+                    <td th:text="${empleado.nombre}"></td>
+                    <td th:text="${empleado.apellido}"></td>
+                    <td th:text="${empleado.numero_identificacion}"></td>
+                    <td th:text="${empleado.nDespacho}"></td>
+                    <td th:text="${empleado.anioIncorporacion}"></td>
+                    <td>
+                        <a th:class="modificar"
+                            th:href="@{/empleado/modificarEmpleado/{id}(id=${empleado.id})}">Modificar</a>
+                        <a th:class="eliminar"
+                            th:href="@{/empleado/eliminarEmpleado/{id}(id=${empleado.id})}">Eliminar</a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

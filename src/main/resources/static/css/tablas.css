@@ -1,0 +1,110 @@
+body,
+h1,
+h2,
+h3,
+p,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 1000px;
+    min-height: 90vh;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+table th,
+table td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+
+table th:nth-child(2),
+table td:nth-child(2),
+table th:nth-child(3),
+table td:nth-child(3) {
+    width: 15%;
+}
+
+table th:nth-child(4),
+table td:nth-child(4) {
+    width: 10%;
+}
+
+
+a.modificar,
+a.eliminar,
+a.matricular {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 3px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.2s, color 0.2s;
+}
+
+a.modificar {
+    background-color: #FFA000;
+}
+
+a.eliminar {
+    background-color: #F44336;
+}
+
+a.matricular {
+    background-color: #3F51B5;
+}
+
+a.modificar:hover,
+a.eliminar:hover,
+a.matricular:hover {
+    transform: scale(1.05);
+    color: #440000;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}

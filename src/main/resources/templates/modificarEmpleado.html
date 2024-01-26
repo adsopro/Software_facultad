@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Empleado</title>
+    <link rel="stylesheet" th:href="@{/css/modificar.css}">
+</head>
+
+<body>
+    <div th:class="container">
+        <h2 th:class="encabezado">Modificar Empleado</h2>
+
+        <form th:action="@{/empleado/actualizarEmpleado}" th:object="${empleado}" method="post">
+            <input type="hidden" th:field="*{id}" />
+            <label for="nombre">Nombre:</label>
+            <input type="text" th:field="*{nombre}" /><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" th:field="*{apellido}" /><br>
+
+            <input type="hidden" th:field="*{numero_identificacion}" />
+
+            <label for="anioIncorporacion">Año de incorporacion:</label>
+            <input type="text" th:field="*{anioIncorporacion}" /><br>
+
+            <label for="nDespacho">Despacho:</label>
+            <input type="text" th:field="*{nDespacho}" /><br>
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil">
+                <option th:each="estado : ${estadoCivilValues}" th:value="${estado}" th:text="${estado.estado}">
+                </option>
+            </select><br>
+
+            <button type="submit">Guardar cambios</button>
+        </form>
+
+        <a th:href="@{/empleado/empleados}">Volver a la lista de empleados</a>
+    </div>
+</body>
+
+</html>

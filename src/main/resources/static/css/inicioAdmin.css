@@ -1,0 +1,140 @@
+/*body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 70%;
+    width: 30%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#titulo {
+    text-align: center;
+    font-size: 35px;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.lista a {
+    margin: 10px;
+    font-size: 25px;
+}*/
+
+/* Resetear los márgenes y rellenos por defecto */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el cuerpo */
+body {
+    height: 95vh;
+    /* Ajustar la altura del body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    /* Reduce el ancho al 60% */
+    max-width: 600px;
+    /* Agrega un máximo para evitar que se vuelva demasiado ancho */
+    height: 55vh;
+    /* Reduce la altura al 50% */
+    background-color: #f9f9f9;
+    /* Color de fondo suave */
+    border-radius: 20px;
+    /* Bordes redondeados */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    padding: 20px;
+    /* Espacio interno */
+}
+
+/* Estilos para el título */
+#titulo {
+    font-size: 24px;
+    color: #ff9900;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los enlaces */
+.lista a {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    margin: 13px 0;
+    transition: font-size 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    /* Cambio del cursor */
+}
+
+.lista a:hover {
+    font-size: 18.5px;
+    /* Cambia el tamaño al que se agranda */
+    color: #ff9900;
+    /* Cambia el color al hacer hover */
+}
+
+.lista #elemento5:hover {
+    font-size: 18.2px;
+    color: #ff9900;
+}
+
+/* Estilos para el texto */
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    /* Reduce el margen superior */
+    width: 80%;
+    /* Reduce el ancho al 80% */
+}
+
+.texto p {
+    font-size: 16px;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Media query para diseño responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        /* Reduce el espacio interno en dispositivos pequeños */
+    }
+
+    .texto p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,46 @@
+.container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 80%; 
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+
+.titulo-form {
+  font-size: 3rem; 
+  margin-bottom: 20px; 
+}
+
+.form-group > div > input {
+  width: 100%; 
+}
+
+.btn-custom {
+  width: auto; 
+  padding: 10px 20px; 
+  font-size: 18px; 
+  background-color: #ffcf00;
+  color: #242424;
+  margin-top: 10px; 
+}
+
+.btn-custom:hover {
+  border: #ffcf00 solid 1px;
+  background-color: #ffcf00;
+  color: whitesmoke;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .titulo-form {
+    font-size: 2rem; 
+  }
+}

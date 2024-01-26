@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Estudiantes</title>
+    <link rel="stylesheet" th:href="@{/css/tablas.css}">
+</head>
+
+<body>
+    <div th:class="container">
+        <h2>Lista de Estudiantes</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Número de identificación</th>
+                    <th>Cursos</th>
+                    <th>Acciones</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="estudiante : ${estudiantes}">
+                    <td th:text="${estudiante.id}"></td>
+                    <td th:text="${estudiante.nombre}"></td>
+                    <td th:text="${estudiante.apellido}"></td>
+                    <td th:text="${estudiante.numero_identificacion}"></td>
+                    <td>
+                        <select>
+                            <option th:each="curso : ${estudiante.cursos}" th:value="${curso.id}"
+                                th:text="${curso.nombre}">
+                            </option>
+                        </select>
+                    </td>
+                    <td>
+                        <a th:class="modificar"
+                            th:href="@{/estudiante/modificarEstudiante/{id}(id=${estudiante.id})}">Modificar</a>
+                        <a th:class="eliminar"
+                            th:href="@{/estudiante/eliminarEstudiante/{id}(id=${estudiante.id})}">Eliminar</a>
+                        <a th:class="matricular"
+                            th:href="@{/estudiante/matricularEstudiante/{id}(id=${estudiante.id})}">Matricular</a>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

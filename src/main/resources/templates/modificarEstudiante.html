@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Estudiante</title>
+    <link rel="stylesheet" th:href="@{/css/modificar.css}">
+</head>
+
+<body>
+    <div th:class="container">
+        <h2 th:class="encabezado">Modificar Estudiante</h2>
+
+        <form th:action="@{/estudiante/actualizarEstudiante}" th:object="${estudiante}" method="post">
+            <input type="hidden" th:field="*{id}" />
+            <label for="nombre">Nombre:</label>
+            <input type="text" th:field="*{nombre}" /><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" th:field="*{apellido}" /><br>
+
+            <input type="hidden" th:field="*{numero_identificacion}" />
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil">
+                <option th:each="estado : ${estadoCivilValues}" th:value="${estado}" th:text="${estado.estado}">
+                </option>
+            </select><br>
+
+
+            <button type="submit">Guardar cambios</button>
+        </form>
+
+        <a th:href="@{/estudiante/estudiantes}">Volver a la lista de estudiantes</a>
+    </div>
+</body>
+
+</html>
